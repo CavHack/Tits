@@ -1,3 +1,3 @@
 # Tits
 
-Quantum Secure Blockchain based on Gibbs Entropy: A Stochastic Petri-Net Hashing through Lamport Clocks. A modern interpretation of a distributed NoSQL Append-Only Format. Furthermore, our guiding principle is a Dirac Soliton in the Network Tomography of Singularities genetic to some CA-DAG (Cellular Automata / Directed Acyclic C.A) with a genetic consensual rpc issuing 'EPR verification contracts' stored in a wallet.
+Tits is a Decentralized Quantum Secured Ledger based on Bimodal Homomorphic Lattice Encryption with Gibbs Entropy. A Lamport Invariant Learning from Errors Crown Topology (DAG).  A modern interpretation of a distributed NoSQL Append-Only blockchain. 
