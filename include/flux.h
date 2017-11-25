@@ -27,6 +27,7 @@
 
 #ifndef _FLUX_H
 #define _FLUX_H
+#include <fstream>
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -39,6 +40,33 @@
 #define SHA3_256_DIGEST_LENGTH 32
 #define SHA3_384_DIGEST_LENGTH 48
 #define SHA3_512_DIGEST_LENGTH 64
+
+#define ENTROPYPOOL_SIZE 10 //*512bits
+
+class Flux {
+ private:
+  unsigned long fluxBitPool;
+  unsigned char* fluxCharPool;
+  unsigned long* fluxLongPool;
+
+  long posFluxBitPool;
+  long posFluxCharPool;
+  long posFluxLongPool;
+
+  unsigned char* current_seed;
+
+  FILE* fp;
+
+ public:
+  Flux();
+  ~Flux();
+
+  void sha512(unsigned char* hash);
+  void populateCharPool();
+  void populateLongPool();
+  void populateBitPool();
+  bool getRandomBit();
+
 
 struct sha3 {
   
@@ -55,9 +83,13 @@ typedef struct { struct sha3 C384; } SHA3_384_VSYS;
 typedef struct genisys_s {
 
   uint64_t bit_pool;
-  uint8_t char_pool[SHA3_512_DIGEST_LENGTH * EPOOL_HASH_COUNT];
+  uint8_t  char_pool[SHA3_512_DIGEST_LENGTH * EPOOL_HASH_COUNT];
   uint16_t int16_pool[HASH_LEN_UINT16 * EPOOL_HASH_COUNT];
+  uint64_t int64_pool;
+  uint8_t  seed[SHA3_512_DIGEST_LENGTH];
+  uint32_t bit_index;
+  uint32_t char_index;
+  uint32_t int16_index
 
 
-
-}
+}}
