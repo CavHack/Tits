@@ -18,3 +18,46 @@
 
 */
 // ===================================================================================
+
+#ifndef TITS_CORE_STOCHASTICCLOCK_H_
+#define TITS_CORE_STOCHASTICCLOCK_H_
+
+#include <tits/causet/causetclock/causet_clock.h>
+#include <tits/causet/utility/causetJournal.h>
+#include <tits/basics/chrono.h>
+#include <string>
+#include <vector>
+
+
+
+namespace tits {
+
+
+  /**Keep tabs on time spent*/
+  class StochasticClock : public causet::causet_clock<NetTime>
+
+
+
+
+}
+
+public: 
+virtual ~StochasticClock() = default;
+
+
+
+virtual void run (std::vector<std::string> const& whichServers) = 0;
+
+/*Tits server time*/
+
+virtual time_stamp closeTime() const = 0;
+
+virtual void adjustCloseTime (std::chrono::duration<std::int32_t> amount) = 0;
+
+virtual std::chrono::duration<std::int32_t>
+nowOffset() const = 0;
+
+
+
+
+
