@@ -12,3 +12,6 @@ These are the traits of Tits which makes the blockchain secure against Quantum a
 Post-Byzantine Fault-Tolerance (Non-interactive zero-knowledge): the genisys oralce is a random oracle which responds to every unique query with a (truly) random response chosen uniformly from its output domain. A proof system is thus zero-knowledge if there is a simulator S such that no adversary who can make queries to the random oracle can distinguish from sigma protocols.
 
 
+Bernoulli Entropy Coding: The genisys oracle builds a sampler from a Gaussian distribution of arbitrary standard deviations and classifies rejection parameters based on stochastic principles.
+
+Signature-
